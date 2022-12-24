@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅游网</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/focus.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/animate.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/template-web.js"></script>
+    <script src="js/04_ajax_kuayu.js"></script>
+    <script src="js/09_index.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <a href="">跳过暂存区</a>
+    <div class="header w">
+        <div class="logo">
+            <img src="./images/logo1.jpeg" alt="">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="">推荐</a></li>
+                <li><a href="">旅游规划</a></li>
+            </ul>
+        </div>
+        <div class="search-ajax">
+            <!-- 搜索区域 -->
+            <input type="search" name="" id="ipt" class="search" placeholder="输入关键词">
+            <button></button>
+            <!-- 搜索建议列表 -->
+            <div id="suggest-list">
+
+            </div>
+        </div>
+
+        <!-- 定义模板结构 -->
+        <script type="text/html" id="tpl-suggestList">
+            {{each result}}
+            <!-- 搜索建议项 -->
+            <div class="suggest-item">{{$value[0]}}</div>
+            {{/each}}
+        </script>
+
+        <div class="user">
+            <img src="./images/user.jpg" alt="">
+            <span>梦瑶</span>
+        </div>
+        <div class="login">
+            <span id="span_username"></span>
+            <a href="myfavorite.html" class="collection">我的收藏</a>
+            <a href="javascript:;location.href = 'exitServlet';">退出</a>
+        </div>
+        <div class="login_out">
+            <a href="./login.html">登陆</a>&nbsp;
+            <a href="./register.html">注册</a>
+        </div>
+    </div>
+    <!-- goods区域 -->
+    <div class="goods w">
+        <h3>精品推荐</h3>
+        <div class="goods_items">
+            <ul>
+                <li><a href="">国内游</a></li>
+                <li><a href="">国外游</a></li>
+                <li><a href="./myfavorite.html">我的收藏</a></li>
+                <li><a href="./favoriterank.html">旅游排行</a></li>
+                <li><a href="./route_datil.html">路线详情</a></li>
+                <li><a href="./routelist.html">路线列表</a></li>
+            </ul>
+        </div>
+        <div class="mod">
+            修改兴趣
+        </div>
+    </div>
+    <!-- banner区域 -->
+    <div class="banner">
+        <div class="w">
+            <div class="focus">
+                <!-- 左右箭头 -->
+                <a href="javascript:;" class="arrow-l">&lt;</a>
+                <a href="javascript:;" class="arrow-r">&gt;</a>
+                <!-- 轮播图 -->
+                <ul>
+                    <li><img src="images/banner1.jpeg" alt=""></li>
+                    <li><img src="images/banner2.jpeg" alt=""></li>
+                    <li><img src="images/banner3.jpg" alt=""></li>
+                </ul>
+                <!-- circle小圆圈 -->
+                <ol class="circle">
+
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- main区域 -->
+    <div class="main_re w">
+        <div class="main_re_hd ">
+            <span>中国名山</span>
+            <a href="">查看全部</a>
+        </div>
+        <div class="main_re_bd clearfix">
+            <ul>
+                <li>
+                    <a href=""><img src="./upload/upload1华山.jpeg" alt=""></a>
+                    <h4>
+                        &nbsp;&nbsp;&nbsp;&nbsp;自古华山一条路，奇险天下第一山
+                    </h4>
+                    <div class="info">
+                        <span>西岳华山</span>
+                    </div>
+                </li>
+                <li>
+                    <a href=""><img src="./upload/upload2泰山.jpeg" alt=""></a>
+                    <h4>
+                        &nbsp;&nbsp;&nbsp;&nbsp;万古齐州烟九点,五更沧海日上竿
+                    </h4>
+                    <div class="info">
+                        <span>东岳泰山</span>
+                    </div>
+                </li>
+                <li>
+                    <a href=""><img src="./upload/upload3衡山.jpeg" alt=""></a>
+                    <h4>
+                        &nbsp;&nbsp;&nbsp;&nbsp;茅洞玉声流暗水,衡山碧色映朝阳
+                    </h4>
+                    <div class="info">
+                        <span>南岳衡山</span>
+                    </div>
+                </li>
+                <li>
+                    <a href=""><img src="./upload/upload4恒山.jpeg" alt=""></a>
+                    <h4>
+                        &nbsp;&nbsp;&nbsp;&nbsp;恒山北走见云气,滹水西来闻雁声
+                    </h4>
+                    <div class="info">
+                        <span>北岳恒山</span>
+                    </div>
+                </li>
+                <li>
+                    <a href=""><img src="./upload/upload5嵩山.jpeg" alt=""></a>
+                    <h4>
+                        &nbsp;&nbsp;&nbsp;&nbsp;榆柳萧疏楼阁闲,月明直见嵩山雪
+                    </h4>
+                    <div class="info">
+                        <span>中岳嵩山</span>
+                </li>
+                <li>
+                    <a href=""><img src="./upload/upload6珠穆朗玛峰.jpeg" alt=""></a>
+                    <h4>
+                        &nbsp;&nbsp;&nbsp;&nbsp;世界第一高山,引无数英雄竟折腰
+                    </h4>
+                    <div class="info">
+                        <span>珠穆朗玛峰</span>
+                    </div>
+                </li>
+                <li>
+                    <a href=""><img src="./upload/upload7太行山.jpeg" alt=""></a>
+                    <h4>
+                        &nbsp;&nbsp;&nbsp;&nbsp;长风破浪会有时,直挂云帆济沧海
+                    </h4>
+                    <div class="info">
+                        <span>太行山</span>
+                    </div>
+                </li>
+                <li>
+                    <a href=""><img src="./upload/upload8昆仑山.jpeg" alt=""></a>
+                    <h4>
+                        &nbsp;&nbsp;&nbsp;&nbsp;独把象牙梳插鬓,昆仑山上月初明
+                    </h4>
+                    <div class="info">
+                        <span>昆仑山</span>
+                    </div>
+                </li>
+                <li>
+                    <a href=""><img src="./upload/upload9太白山.jpeg" alt=""></a>
+                    <h4>
+                        &nbsp;&nbsp;&nbsp;&nbsp;阴崖皑皑积古雪,绝壑长松几摧折
+                    </h4>
+                    <div class="info">
+                        <span>太白山</span>
+                    </div>
+                </li>
+                <li>
+                    <a href=""><img src="./upload/upload10峨眉山.jpeg" alt=""></a>
+                    <h4>
+                        &nbsp;&nbsp;&nbsp;&nbsp;娥眉山月半轮秋,影入平羌江水流
+                    </h4>
+                    <div class="info">
+                        <span>峨眉山</span>
+                    </div>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <!-- code模块 -->
+        <div class="code w">
+            <div class="code_hd">
+                <div class="code_add">
+                    <img src="./images/icon1.jpg" alt="">
+                    <span>国内游</span>
+                    <a href="">查看全部</a>
+                </div>
+            </div>
+            <div class="code_bd">
+                <div class="php">
+                    <a href="">
+                        <img src="./images/国内游.jpeg" alt="">
+                    </a>
+
+                </div>
+                <div class="php_info">
+                    <div class="py">
+                        <img src="./images/国内游nav.jpeg" alt="">
+                    </div>
+                    <div class="code_items">
+                        <ul>
+                            <li>
+                                <a href=""><img src="./upload/upload11钟楼.jpeg" alt=""></a>
+                                <h4>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;观赏西安标志性建筑,赏西安之美
+                                </h4>
+                                <div class="info">
+                                    <span>西安钟楼</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href=""><img src="./upload/upload12三亚.jpeg" alt=""></a>
+                                <h4>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;中国的夏日旅行避暑圣地,赏三亚风光
+                                </h4>
+                                <div class="info info_">
+                                    <span>海南三亚</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href=""><img src="./upload/upload13迪士尼.jpeg" alt=""></a>
+                                <h4>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;上海童话游乐园,这里有特色的游戏项目和美食
+                                </h4>
+                                <div class="info info_">
+                                    <span>上海迪士尼</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href=""><img src="./upload/upload14八达岭.jpeg" alt=""></a>
+                                <h4>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;万里长城八达岭,感受中国的千年文化
+                                </h4>
+                                <div class="info">
+                                    <span>北京八达岭</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="code w">
+            <div class="code_hd">
+                <div class="code_add">
+                    <img src="./images/icon2.jpg" alt="">
+                    <span>国外游</span>
+                    <a href="">查看全部</a>
+                </div>
+            </div>
+            <div class="code_bd">
+                <div class="php">
+                    <a href="">
+                        <img src="./images/国外游.jpeg" alt="">
+                    </a>
+
+                </div>
+                <div class="php_info">
+                    <div class="py">
+                        <img src="./images/国外游nav.jpeg" alt="">
+                    </div>
+                    <div class="code_items">
+                        <ul>
+                            <li>
+                                <a href=""><img src="./upload/upload15好莱坞.jpeg" alt=""></a>
+                                <h4>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;全球最大的影视城,了解先进的电影艺术
+                                </h4>
+                                <div class="info">
+                                    <span>美国好莱坞</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href=""><img src="./upload/upload16巴黎.jpeg" alt=""></a>
+                                <h4>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;法国浪漫之都,夜晚的特色风景让您回味无穷
+                                </h4>
+                                <div class="info ">
+                                    <span>法国巴黎</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href=""><img src="./upload/upload17悉尼.jpeg" alt=""></a>
+                                <h4>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;悉尼歌剧院,感受国外深厚的艺术文化气息
+                                </h4>
+                                <div class="info ">
+                                    <span>澳大利亚悉尼</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href=""><img src="./upload/upload18巴塞罗那.jpeg" alt=""></a>
+                                <h4>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;足球,建筑,雕塑,绘画,音乐.感受西班牙人民的生活
+                                </h4>
+                                <div class="info">
+                                    <span>西班牙巴塞罗那</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- star模块 -->
+        <div class="star w">
+            <div class="star_nav">
+                <span>明星演唱会</span>
+            </div>
+            <div class="star_body">
+                <ul>
+                    <li>
+                        <a href=""><img src="./upload/upload19李知恩.jpeg" alt=""></a>
+                        <span>IU李知恩</span>
+                    </li>
+                    <li>
+                        <a href=""><img src="./upload/upload20tfboys.jpeg" alt=""></a>
+                        <span>TF-boys</span>
+                    </li>
+                    <li>
+                        <a href=""><img src="./upload/upload21周杰伦.jpeg" alt=""></a>
+                        <span>Jay-周杰伦</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- footer模块 -->
+        <div class="foot">
+            <div class="footer w">
+
+                <div class="logo2">
+                    <img src="./images/logo2.jpeg" alt="">
+                </div>
+                <div class="load">
+                    下载APP
+                </div>
+                <div class="study_items">
+                    <dl>
+                        <dt>关于旅游网</dt>
+                        <dd>关于</dd>
+                        <dd>管理团队</dd>
+                        <dd>工作机会</dd>
+                        <dd>客户服务</dd>
+                        <dd>帮助</dd>
+
+                    </dl>
+                    <dl>
+                        <dt>新手指南</dt>
+                        <dd>如何注册</dd>
+                        <dd>如何选择</dd>
+                        <dd>如何拿到导游证</dd>
+                        <dd>导游证是什么</dd>
+                        <dd>旅游指南</dd>
+                    </dl>
+                    <dl>
+                        <dt>合作伙伴</dt>
+                        <dd>合作机构</dd>
+                        <dd>合作导师</dd>
+                    </dl>
+
+                </div>
+                <span class="detail">西安文理学院 版权所有Copyright 2022-2024, 开发人:马志雄 宗梦薇 指导教师:车鹏飞 任绒 陕ICP备1006152456</span>
+            </div>
+
+            <!-- <div class="detail"></div> -->
+        </div>
+        <!-- <script src="./js/EasyLazyload.min.js"></script> -->
+        <!-- 图片懒加载技术 -->
+        <!-- <script>
+            lazyLoadInit({
+                showTime: 1100,
+                onLoadBackEnd: function(i, e) {
+                    console.log("onLoadBackEnd:" + i);
+                },
+                onLoadBackStart: function(i, e) {
+                    console.log("onLoadBackStart:" + i);
+                }
+            });
+        </script> -->
+</body>
+
+</html>

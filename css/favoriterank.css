@@ -1,0 +1,110 @@
+*{
+    padding: 0px;
+    margin: 0px
+}
+.shaixuan {
+    height: 50px;
+    line-height: 50px;
+    background-color: #eeeeee;
+    margin-top: 20px;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+
+.shaixuan input:nth-of-type(1) {
+    width: 470px;
+    height: 30px;
+    border: 1px solid #cccccc;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.shaixuan input:nth-of-type(2),
+.shaixuan input:nth-of-type(3) {
+    width: 72px;
+    height: 30px;
+    border: 1px solid #cccccc;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.shaixuan input:nth-of-type(3) {
+    margin-left: 10px;
+}
+
+.shaixuan button {
+    float: right;
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #ffc900;
+    text-align: center;
+    border-radius: 3px;
+    margin-right: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    /* outline: none; */
+}
+
+.list {
+    overflow: hidden;
+    margin-top: 20px;
+    background-color:#eeeeee;
+}
+
+.list ul li {
+    float: left;
+    width: 500px;
+    height: 170px;
+    margin-left: 70px;
+    margin-top: 30px;
+    background-color: #eeeeee;
+
+}
+.out:hover {
+    box-shadow: 20px 11px 18px rgba(0, 0, 0, .5);}
+.list w clearfix ul  {
+    width: 500px;
+    height: 170px;
+
+}
+
+.list ul li:nth-child(2n) {
+    margin-right: 0;
+}
+
+.list ul li:nth-child(-n+2) {
+    margin-top: 0;
+}
+.gather{
+    width: 160px;
+    height: 170px;
+    margin:5px 0;
+    float: left;
+    
+}
+.gather>img{
+    border-radius: 40px;
+}
+.jieshao{
+    display: inline-block;
+    width: 300px;
+    height: 84px;
+    padding: 30px 40px;
+    line-height: 30px;
+}
+.jieshao span{
+    color: rgb(35, 10, 219);
+}
+.assess{
+     width: 200px;
+    height: 84px;
+    float: left;
+    margin: 30px 40px;
+
+}
+.out{width: 500px;
+    height: 170px;
+    border-radius: 40px;
+}

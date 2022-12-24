@@ -1,0 +1,32 @@
+.favorite_items {
+    overflow: hidden;
+    height: 40px;
+    /* background-color: pink; */
+    margin-top: 36px;
+}
+
+.favorite_items .font {
+    float: left;
+    width: 75px;
+    margin-right: 10px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #eeeeee;
+}
+
+.favorite_items ul li {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    line-height: 40px;
+    text-align: center;
+    /* background-color: skyblue; */
+    border-radius: 50%;
+    transition: all .4s;
+    border: 1px solid #eeeeee;
+}
+
+.favorite_items ul li:hover {
+    transform: scale(1.2);
+}

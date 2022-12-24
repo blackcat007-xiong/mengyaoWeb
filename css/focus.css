@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* .header {
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: pink;
+    text-align: center;
+    font-size: 30px;
+} */
+
+.current {
+    background-color: #ffffff;
+}
+
+.focus {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: pink;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+.focus ul {
+    position: absolute;
+    width: 600%;
+    top: 0;
+    left: 0;
+}
+
+.focus ul li {
+    float: left;
+}
+
+.focus ul li img {
+    width: 500px;
+    height: 300px;
+}
+
+
+/* 小圆圈模块 */
+
+.circle {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    height: 20px;
+}
+
+.circle li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin: 5px 5px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* 两个按钮 */
+
+.arrow-l {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    top: 50%;
+    left: 0;
+    margin-top: -25px;
+    background: rgba(0, 0, 0, .3);
+    z-index: 2;
+    text-align: center;
+}
+
+.arrow-r {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    top: 50%;
+    right: 0;
+    margin-top: -25px;
+    background: rgba(0, 0, 0, .3);
+    z-index: 2;
+    text-align: center;
+}

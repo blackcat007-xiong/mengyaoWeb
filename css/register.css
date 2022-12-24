@@ -1,0 +1,147 @@
+.register {
+    overflow: hidden;
+    height: 585px;
+    background: url(../images/bg1.jpeg) no-repeat;
+    background-size: cover;
+}
+
+.re_form {
+    width: 950px;
+    height: 534px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    border: 5px solid #eeeeee;
+    /* text-align: center; */
+}
+
+.re_left {
+    float: left;
+    width: 180px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.re_left p {
+    font-size: 20px;
+}
+
+.re_left p:first-child {
+    color: #ffcd26;
+}
+
+.re_left p:last-child {
+    color: #a6a6a6;
+}
+
+
+/* 表单验证css */
+
+.error {
+    /* display: none; */
+    color: #c81523;
+    font-size: 14px;
+}
+
+.error_icon,
+.success_icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: url(../images/error.png) no-repeat;
+    margin-top: -2px;
+}
+
+.success {
+    color: green;
+    font-size: 14px;
+}
+
+.success_icon {
+    background: url(../images/success.png) no-repeat;
+}
+
+.re_content {
+    float: left;
+    width: 525px;
+    height: 467px;
+    /* background-color: pink; */
+    margin-top: 10px;
+    margin-left: 112px;
+}
+
+.re_content ul li {
+    margin: 20px 0;
+    height: 32px;
+}
+
+.re_content ul li label {
+    float: left;
+    width: 65px;
+    height: 32px;
+    line-height: 32px;
+    /* background-color: skyblue; */
+    text-align: center;
+}
+
+.re_content ul li:nth-child(-n+5) input,
+.re_content ul li:nth-child(7) input {
+    width: 256px;
+    height: 32px;
+    margin-left: 15px;
+    border-radius: 4px;
+    border: 1px solid #a6a6a6;
+    padding: 0 5px;
+}
+
+.re_content ul li:nth-child(8) input {
+    width: 118px;
+    height: 32px;
+    margin-left: 15px;
+    border-radius: 4px;
+    border: 1px solid #a6a6a6;
+}
+
+.re_content ul li:last-child {
+    width: 415px;
+    text-align: center;
+}
+
+.re_content ul li:last-child .submit {
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #ffc900;
+    border: 0;
+}
+
+.radio_ {
+    float: left;
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 15px;
+}
+
+.re_right {
+    float: right;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.re_right a {
+    color: #fc8989;
+}
+
+#Msg {
+    float: left;
+    width: 300px;
+    height: 20px;
+    background-color: pink;
+    text-align: center;
+    margin-left: 60px;
+    color: red;
+    font-size: 12px;
+}

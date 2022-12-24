@@ -1,0 +1,249 @@
+/* 头部区域 */
+
+.header {
+    height: 100px;
+}
+
+.header .logo {
+    float: left;
+    width: 194px;
+    height: 100px;
+    /* margin-top: 30px; */
+}
+
+.header .logo img {
+    width: 194px;
+    height: 100px;
+}
+
+.header .nav {
+    float: left;
+    width: 246px;
+    height: 43px;
+    margin-left: 5px;
+    margin-top: 30px;
+}
+
+.header .nav ul li a {
+    float: left;
+    height: 43px;
+    line-height: 43px;
+    font-size: 18px;
+    padding: 0 15px;
+    /* margin-right: 10px; */
+}
+
+.header .nav ul li a:hover {
+    border-bottom: 1px solid #00a4ff;
+}
+
+
+/* search-ajax */
+
+.search-ajax {
+    float: left;
+    width: 410px;
+    /* background-color: pink; */
+}
+
+#suggest-list {
+    border: 1px solid #cccccc;
+    display: none;
+}
+
+.suggest-item {
+    line-height: 30px;
+    padding-left: 5px;
+}
+
+.suggest-item:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+.header .search {
+    float: left;
+    width: 360px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    box-sizing: border-box;
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+.header button {
+    float: left;
+    width: 50px;
+    height: 40px;
+    background: url(../images/btn.png) no-repeat;
+    margin-top: 30px;
+    border: 0;
+}
+
+.header .user {
+    float: left;
+    /* width: 130px; */
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.header .user img {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+
+.header .user span {
+    display: inline-block;
+    font-size: 14px;
+    color: #7e7e7f;
+}
+
+.login {
+    float: left;
+    width: 192px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 30px;
+    margin-left: 15px;
+    font-size: 12px;
+    /* background-color: pink; */
+}
+
+.login a:nth-child(2) {
+    color: #ff7676;
+    margin: 0 10px 0 10px
+}
+
+.login a:nth-child(3) {
+    color: #a1a1a1;
+}
+
+.login_out {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 30px;
+    font-size: 12px;
+    /* background-color: skyblue; */
+}
+
+.login_out a {
+    color: #000000;
+}
+
+
+/* goods区域 */
+
+.goods {
+    height: 60px;
+    line-height: 60px;
+    margin-top: 8px;
+    background-color: #ffffff;
+    /* 盒子阴影 */
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.goods h3 {
+    float: left;
+    margin-left: 35px;
+    color: #00a4ff;
+}
+
+.goods_items ul {
+    float: left;
+    margin-left: 34px;
+}
+
+.goods_items ul li {
+    float: left;
+}
+
+.goods_items ul li a {
+    padding: 0 30px;
+    color: #050505;
+    border-left: 1px solid #ccc;
+}
+
+.mod {
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #00a4ff;
+}
+
+
+/* footer模块 */
+
+.foot {
+    height: 300px;
+    /* margin-top: 30px; */
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+
+.footer {
+    position: relative;
+    height: 300px;
+    background-color: #ffffff;
+}
+
+.logo2 {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+.logo2 img {
+    width: 100%;
+    /* height: 100%; */
+}
+
+.load {
+    position: absolute;
+    top: 215px;
+    left: 113px;
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #00a4ff;
+    color: #00a4ff;
+}
+
+.study_items {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 730px;
+    height: 270px;
+    /* background-color: pink; */
+}
+
+.study_items dl {
+    float: left;
+    margin: 20px 60px;
+    color: #333333;
+    cursor: pointer;
+}
+
+.study_items dl dt {
+    font-weight: 700;
+}
+
+.study_items dl dd {
+    margin-top: 15px;
+}
+
+.detail {
+    position: absolute;
+    bottom: 11px;
+    right: 14px;
+    /* background-color: pink; */
+    font-size: 14px;
+    color: #9dafd2;
+}

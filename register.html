@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/05_register.js"></script>
+    <script src="./js/06_local.js"></script>
+</head>
+
+<body>
+    <div class="header w">
+        <div class="logo">
+            <img src="./images/logo1.jpeg" alt="">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="">推荐</a></li>
+                <li><a href="">旅游规划</a></li>
+            </ul>
+        </div>
+        <input type="search" name="" id="" class="search" placeholder="输入关键词">
+        <button></button>
+        <div class="user">
+            <img src="./images/user.jpg" alt="">
+            <span>梦瑶</span>
+        </div>
+    </div>
+    </div>
+
+    <!-- 注册页面 -->
+    <div class="register">
+        <div class="re_form">
+            <div class="re_left">
+                <p>新用户注册</p>
+                <p>USER REGISTER</p>
+            </div>
+            <!-- 注册页面主体 -->
+            <form action="" id="registerForm" method="POST">
+                <div class="re_content">
+                    <ul>
+                        <li>
+                            <label for="">用户名</label>
+                            <input type="text" name="username" id="username" placeholder="请输入账号">
+                            <span></span>
+                        </li>
+                        <li>
+                            <label for="">密码</label>
+                            <input type="text" name="password" id="password" placeholder="请输入密码">
+                            <span></span>
+                        </li>
+                        <li>
+                            <label for="">Email</label>
+                            <input type="text" name="email" id="email" placeholder="请输入Email">
+                            <span></span>
+                        </li>
+                        <li>
+                            <label for="">姓名</label>
+                            <input type="text" name="name" id="name" placeholder="请输入真实姓名">
+
+                        </li>
+                        <li>
+                            <label for="">手机号</label>
+                            <input type="text" name="telephone" id="telephone" placeholder="请输入您的手机号">
+                            <span></span>
+                        </li>
+                        <li>
+                            <label for="">性别</label>
+                            <div class="radio_">
+                                <input type="radio" id="sex" name="sex" value="男" checked> 男
+                                <input type="radio" name="sex" value="女"> 女
+                            </div>
+                        </li>
+                        <li>
+                            <label for="">出生日期</label>
+                            <input type="date" name="birthday" id="birthday">
+                        </li>
+                        <li>
+                            <label for="">验证码</label>
+                            <input type="text" name="" id="">
+                            <img src="checkCode" height="32px" alt="" onclick="changeCheckCode(this)">
+                            <script type="text/javascript">
+                                //图片点击事件
+                                function changeCheckCode(img) {
+                                    img.src = "checkCode?" + new Date().getTime();
+                                }
+                            </script>
+                        </li>
+                        <li>
+                            <button class="submit">注册</button>
+                        </li>
+                    </ul>
+                    <div id="Msg">
+
+                    </div>
+
+                </div>
+            </form>
+
+            <div class="re_right">
+                <p>已有账号?&nbsp;<a href="./login.html">立即登录</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入底部 -->
+    <div class="foot">
+        <div class="footer w">
+
+            <div class="logo2">
+                <img src="./images/logo2.jpeg" alt="">
+            </div>
+            <div class="load">
+                下载APP
+            </div>
+            <div class="study_items">
+                <dl>
+                    <dt>关于旅游网</dt>
+                    <dd>关于</dd>
+                    <dd>管理团队</dd>
+                    <dd>工作机会</dd>
+                    <dd>客户服务</dd>
+                    <dd>帮助</dd>
+
+                </dl>
+                <dl>
+                    <dt>新手指南</dt>
+                    <dd>如何注册</dd>
+                    <dd>如何选择</dd>
+                    <dd>如何拿到导游证</dd>
+                    <dd>导游证是什么</dd>
+                    <dd>旅游指南</dd>
+                </dl>
+                <dl>
+                    <dt>合作伙伴</dt>
+                    <dd>合作机构</dd>
+                    <dd>合作导师</dd>
+                </dl>
+
+            </div>
+            <span class="detail">西安文理学院 版权所有Copyright 2022-2024, 开发人:马志雄 宗梦薇 指导教师:车鹏飞 任绒 陕ICP备1006152456</span>
+        </div>
+    </div>
+</body>
+
+</html>
